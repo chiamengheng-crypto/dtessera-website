@@ -376,7 +376,7 @@
     <div id="typeA" class="floorplan-content active">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-a.jpg" alt="Type A Floor Plan" id="floorplan-typeA" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+A+Floor+Plan+-+1100+sqft'">
+          <img src="floorplan-type-a.jpg" alt="Type A Floor Plan" id="floorplan-typeA" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+A+Floor+Plan+-+1100+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type A1 - A6</h3>
@@ -408,7 +408,7 @@
     <div id="typeB" class="floorplan-content">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-b.jpg" alt="Type B Floor Plan" id="floorplan-typeB" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+B+Floor+Plan+-+1300+sqft'">
+          <img src="floorplan-type-b.jpg" alt="Type B Floor Plan" id="floorplan-typeB" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+B+Floor+Plan+-+1300+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type B1 - B4</h3>
@@ -440,7 +440,7 @@
     <div id="typeC" class="floorplan-content">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-c.jpg" alt="Type C Floor Plan" id="floorplan-typeC" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+C+Floor+Plan+-+1129+sqft'">
+          <img src="floorplan-type-c.jpg" alt="Type C Floor Plan" id="floorplan-typeC" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+C+Floor+Plan+-+1129+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type C1 - C2 (Elderly-Friendly)</h3>
@@ -472,7 +472,7 @@
     <div id="typeD" class="floorplan-content">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-d.jpg" alt="Type D Floor Plan" id="floorplan-typeD" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+D+Floor+Plan+-+1331+sqft'">
+          <img src="floorplan-type-d.jpg" alt="Type D Floor Plan" id="floorplan-typeD" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+D+Floor+Plan+-+1331+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type D1 - D2 (Elderly-Friendly Corner Unit)</h3>
@@ -729,7 +729,7 @@
   </div>
 
   <script>
-    // Google Apps Script URL
+    // Google Apps Script URL - YOUR URL
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx78EBcc0vv2hKBYopDwBmRrSuCAIuGEm6I-lKg1zCVPW-DY4sBiKk828VdH4irtyg/exec';
 
     window.addEventListener('scroll', function() {
@@ -793,13 +793,17 @@
       const phone = formData.get('phone');
       const unit = formData.get('unit');
       
-      // Send to Google Apps Script
+      console.log('📤 Sending to Google Script:', Object.fromEntries(formData));
+      
+      // Send to Google Apps Script with better error handling
       fetch(SCRIPT_URL, { 
         method: 'POST', 
         body: formData,
-        mode: 'no-cors'
+        mode: 'no-cors' // Required for Google Apps Script
       })
       .then(() => {
+        console.log('✅ Success response received');
+        
         // Show success message
         status.style.display = 'block';
         status.style.background = 'rgba(37, 211, 102, 0.2)';
@@ -825,7 +829,7 @@
         
       })
       .catch(error => {
-        console.error('Error:', error);
+        console.error('❌ Error:', error);
         status.style.display = 'block';
         status.style.background = 'rgba(239, 68, 68, 0.2)';
         status.style.color = '#ef4444';
@@ -858,6 +862,12 @@
 
     document.querySelector('.mobile-menu').addEventListener('click', function() {
       alert('Mobile menu - Add mobile navigation functionality here');
+    });
+
+    // Debug: Log when page loads
+    window.addEventListener('load', function() {
+      console.log('🌐 D\'Tessera website loaded');
+      console.log('📋 Script URL:', SCRIPT_URL);
     });
   </script>
 </body>
