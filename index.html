@@ -156,6 +156,54 @@
     .amenity-card h4{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:10px;color:var(--primary)}
     .amenity-card p{color:var(--text-light);font-size:0.9rem}
 
+    /* FACILITIES SECTION - SPLIT INTO 2 PARTS */
+    .facilities{background:var(--white)}
+    .facilities-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:60px;align-items:center}
+    .facilities-split.reverse{direction:rtl}
+    .facilities-split.reverse > *{direction:ltr}
+    .facilities-image{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-hover);position:relative}
+    .facilities-image img{width:100%;height:auto;display:block}
+    .facilities-content h3{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--primary);margin-bottom:25px}
+    .facilities-content > p{color:var(--text-light);margin-bottom:30px;line-height:1.8}
+    .facilities-list{display:grid;grid-template-columns:1fr;gap:15px}
+    .facility-item{display:flex;align-items:flex-start;gap:12px;padding:15px;background:var(--light);border-radius:12px;transition:all 0.3s}
+    .facility-item:hover{transform:translateX(5px);background:var(--warm)}
+    .facility-item i{color:var(--accent);font-size:1.2rem;margin-top:3px}
+    .facility-item div{font-weight:500;color:var(--text)}
+
+    /* LAYOUT PLAN SECTION WITH TABS */
+    .layout-plan{background:var(--light)}
+    .layout-tabs{display:flex;justify-content:center;gap:15px;margin-bottom:50px;flex-wrap:wrap}
+    .layout-tab-btn{padding:12px 25px;background:var(--white);border:2px solid transparent;color:var(--text);border-radius:50px;cursor:pointer;font-weight:600;font-size:0.9rem;transition:all 0.3s;box-shadow:0 3px 15px rgba(0,0,0,0.08)}
+    .layout-tab-btn.active,.layout-tab-btn:hover{background:var(--primary);color:var(--white);transform:translateY(-2px)}
+    .layout-content{display:none;max-width:1200px;margin:0 auto;animation:fadeIn 0.6s}
+    .layout-content.active{display:block}
+    .layout-showcase{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;background:var(--white);padding:50px;border-radius:25px;box-shadow:var(--shadow);align-items:center}
+    .layout-image{background:var(--light);border-radius:18px;height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .layout-image img{width:100%;height:100%;object-fit:contain;padding:20px}
+    .layout-details h3{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--primary);margin-bottom:15px}
+    .layout-details .size{font-size:1.3rem;color:var(--accent);font-weight:600;margin-bottom:25px;display:block}
+    .layout-details .tag{display:inline-block;padding:6px 15px;background:rgba(201,169,97,0.2);color:var(--accent);border-radius:20px;font-size:0.85rem;font-weight:600;margin-right:10px;margin-bottom:10px}
+    .layout-features-list{margin:25px 0}
+    .layout-features-list h4{margin-bottom:15px;color:var(--primary)}
+    .layout-features-list ul{list-style:none}
+    .layout-features-list li{padding:8px 0;padding-left:28px;position:relative;color:var(--text-light)}
+    .layout-features-list li::before{content:attr(data-number) '. ';position:absolute;left:0;color:var(--accent);font-weight:600}
+
+    /* FAQ SECTION */
+    .faq{background:var(--warm)}
+    .faq-container{max-width:900px;margin:0 auto}
+    .faq-item{background:var(--white);margin-bottom:20px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}
+    .faq-question{padding:25px 30px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:all 0.3s;font-weight:600;color:var(--primary);font-size:1.05rem}
+    .faq-question:hover{background:var(--light)}
+    .faq-question i{transition:transform 0.3s;color:var(--accent)}
+    .faq-item.active .faq-question i{transform:rotate(180deg)}
+    .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease-out}
+    .faq-item.active .faq-answer{max-height:500px}
+    .faq-answer-content{padding:0 30px 25px;color:var(--text-light);line-height:1.8}
+    .faq-answer-content a{color:var(--accent);text-decoration:none;font-weight:600}
+    .faq-answer-content a:hover{text-decoration:underline}
+
     .location{background:var(--white)}
     .location-content{text-align:center;max-width:1200px;margin:0 auto}
     .location-content h3{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--primary);margin-bottom:20px}
@@ -199,11 +247,13 @@
 
     @media(max-width:1024px){
       .hero-content h1{font-size:3.2rem}
-      .about-grid,.floorplan-showcase{grid-template-columns:1fr}
+      .about-grid,.floorplan-showcase,.facilities-split,.layout-showcase{grid-template-columns:1fr}
+      .facilities-split.reverse{direction:ltr}
       nav{display:none}
       .mobile-menu{display:block}
       .form-row{grid-template-columns:1fr}
       .vr-iframe{padding-bottom:100%}
+      .facilities-list{grid-template-columns:1fr}
     }
     @media(max-width:600px){
       .hero-content h1{font-size:2.4rem}
@@ -230,8 +280,9 @@
       <a href="#virtual">Virtual Tour</a>
       <a href="#gallery">Gallery</a>
       <a href="#floorplans">Floor Plans</a>
-      <a href="#amenities">Amenities</a>
-      <a href="#location">Location</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#layout">Layout</a>
+      <a href="#faq">FAQ</a>
       <a href="#contact" class="nav-cta">Book Viewing</a>
     </nav>
     <div class="mobile-menu"><i class="fas fa-bars"></i></div>
@@ -284,7 +335,7 @@
         <p>With a stunning 10-acre park at your doorstep and premium facilities spanning from the ground level to the exclusive sky deck on Level 49, D'Tessera redefines contemporary luxury living in the heart of Petaling Jaya.</p>
         
         <div class="about-features">
-          <div class="about-feature"><i class="fas fa-check-circle"></i><div>Freehold Ownership</div></div>
+          <div class="about-feature"><i class="fas fa-check-circle"></i><div><strong>Leasehold</strong> Ownership</div></div>
           <div class="about-feature"><i class="fas fa-check-circle"></i><div>Bumiputera Lots Available</div></div>
           <div class="about-feature"><i class="fas fa-check-circle"></i><div>Partial Furnishing</div></div>
           <div class="about-feature"><i class="fas fa-check-circle"></i><div>Low Density Living</div></div>
@@ -614,6 +665,528 @@
     </div>
   </section>
 
+  <!-- FACILITIES SECTION - SPLIT INTO 2 PARTS -->
+  <section class="facilities" id="facilities">
+    <div class="section-header">
+      <div class="section-tag">Facilities Plan</div>
+      <h2 class="section-title">Comprehensive Facilities</h2>
+      <p class="section-subtitle">22 world-class facilities designed for your comfort and convenience</p>
+    </div>
+    
+    <!-- Part 1: Podium Level Facilities -->
+    <div class="facilities-split">
+      <div class="facilities-image">
+        <img src="facilities-plan-1.jpg" alt="D'Tessera Podium Facilities" onerror="this.src='https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Podium+Level+Facilities'">
+      </div>
+      <div class="facilities-content">
+        <h3>Podium Level Facilities</h3>
+        <p>Experience resort-style living with our comprehensive range of facilities designed for relaxation, fitness, and social gatherings.</p>
+        
+        <div class="facilities-list">
+          <div class="facility-item">
+            <i class="fas fa-water"></i>
+            <div>Maze Hammock Garden</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-swimming-pool"></i>
+            <div>Play Pool</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-coffee"></i>
+            <div>Cabana Lounge</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-basketball-ball"></i>
+            <div>Half Basketball Court</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-users"></i>
+            <div>Multipurpose Hall</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-couch"></i>
+            <div>Hidden Lounge</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-swimmer"></i>
+            <div>Serene Pool</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-laptop"></i>
+            <div>Co-working Lounge</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Part 2: Sky Deck & Additional Facilities -->
+    <div class="facilities-split reverse">
+      <div class="facilities-image">
+        <img src="facilities-plan-2.jpg" alt="D'Tessera Sky Deck Facilities" onerror="this.src='https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Sky+Deck+Facilities'">
+      </div>
+      <div class="facilities-content">
+        <h3>Sky Deck & Additional Facilities</h3>
+        <p>Ascend to Level 49 and discover exclusive sky facilities with breathtaking panoramic views of the city and surrounding nature.</p>
+        
+        <div class="facilities-list">
+          <div class="facility-item">
+            <i class="fas fa-building"></i>
+            <div>Grand Arrival Lounge</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-hot-tub"></i>
+            <div>Jacuzzi</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-water"></i>
+            <div>Dip Pool</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-umbrella-beach"></i>
+            <div>Sunken Pavilion</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-leaf"></i>
+            <div>Biological Pond</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-gamepad"></i>
+            <div>Gamer's Hideout</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-film"></i>
+            <div>Mini Theater & Bar</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-palette"></i>
+            <div>Imaginarium</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-child"></i>
+            <div>Kid's Playground</div>
+          </div>
+          <div class="facility-item">
+            <i class="fas fa-cloud-sun"></i>
+            <div>Sky Deck (Level 49)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYOUT PLAN SECTION WITH 7 LAYOUTS -->
+  <section class="layout-plan" id="layout">
+    <div class="section-header">
+      <div class="section-tag">Layout Plan</div>
+      <h2 class="section-title">Site Layout</h2>
+      <p class="section-subtitle">Explore our thoughtfully designed unit layouts</p>
+    </div>
+    
+    <div class="layout-tabs">
+      <button class="layout-tab-btn active" onclick="showLayout('layoutA1A2')">Type A1 & A2</button>
+      <button class="layout-tab-btn" onclick="showLayout('layoutA3A4')">Type A3 & A4</button>
+      <button class="layout-tab-btn" onclick="showLayout('layoutA5A6')">Type A5 & A6</button>
+      <button class="layout-tab-btn" onclick="showLayout('layoutB1B2')">Type B1 & B2</button>
+      <button class="layout-tab-btn" onclick="showLayout('layoutB3B4')">Type B3 & B4</button>
+      <button class="layout-tab-btn" onclick="showLayout('layoutC1C2')">Type C1 & C2</button>
+      <button class="layout-tab-btn" onclick="showLayout('layoutD1D2')">Type D1 & D2</button>
+    </div>
+
+    <!-- Layout A1 & A2 -->
+    <div id="layoutA1A2" class="layout-content active">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-a1-a2.jpg" alt="Type A1 & A2 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+A1+%26+A2'">
+        </div>
+        <div class="layout-details">
+          <h3>Type A1 & A2</h3>
+          <span class="size">3+1 Bedrooms | 2 Bathrooms | 1,100 sq.ft</span>
+          <div>
+            <span class="tag">Balcony Unit</span>
+            <span class="tag">Park View</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout A3 & A4 -->
+    <div id="layoutA3A4" class="layout-content">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-a3-a4.jpg" alt="Type A3 & A4 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+A3+%26+A4'">
+        </div>
+        <div class="layout-details">
+          <h3>Type A3 & A4</h3>
+          <span class="size">3+1 Bedrooms | 2 Bathrooms | 1,100 sq.ft</span>
+          <div>
+            <span class="tag">Balcony Unit</span>
+            <span class="tag">Waterfall View</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout A5 & A6 -->
+    <div id="layoutA5A6" class="layout-content">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-a5-a6.jpg" alt="Type A5 & A6 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+A5+%26+A6'">
+        </div>
+        <div class="layout-details">
+          <h3>Type A5 & A6</h3>
+          <span class="size">3+1 Bedrooms | 2 Bathrooms | 1,100 sq.ft</span>
+          <div>
+            <span class="tag">Balcony Unit</span>
+            <span class="tag">City View</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout B1 & B2 -->
+    <div id="layoutB1B2" class="layout-content">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-b1-b2.jpg" alt="Type B1 & B2 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+B1+%26+B2'">
+        </div>
+        <div class="layout-details">
+          <h3>Type B1 & B2</h3>
+          <span class="size">4+1 Bedrooms | 2 Bathrooms | 1,300 sq.ft</span>
+          <div>
+            <span class="tag">Balcony Unit</span>
+            <span class="tag">Park View</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+              <li data-number="15">A/C Ledge</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout B3 & B4 -->
+    <div id="layoutB3B4" class="layout-content">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-b3-b4.jpg" alt="Type B3 & B4 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+B3+%26+B4'">
+        </div>
+        <div class="layout-details">
+          <h3>Type B3 & B4</h3>
+          <span class="size">4+1 Bedrooms | 2 Bathrooms | 1,300 sq.ft</span>
+          <div>
+            <span class="tag">Balcony Unit</span>
+            <span class="tag">Waterfall View</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+              <li data-number="15">A/C Ledge</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout C1 & C2 -->
+    <div id="layoutC1C2" class="layout-content">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-c1-c2.jpg" alt="Type C1 & C2 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+C1+%26+C2'">
+        </div>
+        <div class="layout-details">
+          <h3>Type C1 & C2</h3>
+          <span class="size">3+1 Bedrooms | 2 Bathrooms | 1,129 sq.ft</span>
+          <div>
+            <span class="tag">Elderly-Friendly</span>
+            <span class="tag">Balcony Unit</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer (with ramp)</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom (wheelchair accessible)</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Layout D1 & D2 -->
+    <div id="layoutD1D2" class="layout-content">
+      <div class="layout-showcase">
+        <div class="layout-image">
+          <img src="layout-d1-d2.jpg" alt="Type D1 & D2 Layout" onerror="this.src='https://via.placeholder.com/700x600/f0e9d8/1a3a2e?text=Layout+Type+D1+%26+D2'">
+        </div>
+        <div class="layout-details">
+          <h3>Type D1 & D2</h3>
+          <span class="size">4+1 Bedrooms | 2 Bathrooms | 1,331 sq.ft</span>
+          <div>
+            <span class="tag">Elderly-Friendly</span>
+            <span class="tag">Balcony Unit</span>
+            <span class="tag">Corner Unit</span>
+          </div>
+          <div class="layout-features-list">
+            <h4>Room Details:</h4>
+            <ul>
+              <li data-number="1">Foyer (with ramp)</li>
+              <li data-number="2">Kitchen</li>
+              <li data-number="3">Yard</li>
+              <li data-number="4">Dining</li>
+              <li data-number="5">Living</li>
+              <li data-number="6">Balcony</li>
+              <li data-number="7">Bedroom 1</li>
+              <li data-number="8">Bedroom 2</li>
+              <li data-number="9">Bedroom 3</li>
+              <li data-number="10">Bathroom (wheelchair accessible)</li>
+              <li data-number="11">Utility</li>
+              <li data-number="12">Study</li>
+              <li data-number="13">Master Bedroom</li>
+              <li data-number="14">Master Bathroom</li>
+              <li data-number="15">A/C Ledge</li>
+            </ul>
+          </div>
+          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Layout Plan</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION WITH OFFICIAL CONTENT -->
+  <section class="faq" id="faq">
+    <div class="section-header">
+      <div class="section-tag">FAQ</div>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      <p class="section-subtitle">Find answers to common questions about D'Tessera Residences</p>
+    </div>
+    
+    <div class="faq-container">
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is the tenure of D'Tessera Residences?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            D'Tessera Residences is a <strong>Leasehold</strong> development.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>When is the expected completion date?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            The expected completion date is <strong>Q3 2026</strong>. For the latest updates, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Are there any Bumiputera lots available?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes, <strong>Bumiputera lots are available</strong>. Please contact us for more information on availability and pricing.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What is the maintenance fee?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            The maintenance fee is <strong>RM0.35 per sq.ft</strong> (including sinking fund), which is very competitive for the comprehensive facilities offered.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Is the unit furnished?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            The units come with <strong>partial furnishing</strong>. For detailed specifications, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Can I customize the unit layout?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes! All units feature <strong>hackable walls</strong>, allowing you to customize the layout to suit your family's needs.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>Are there elderly-friendly units?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Yes, <strong>Type C and Type D</strong> units are designed with elderly-friendly features including built-in ramps at the foyer and wheelchair-accessible bathrooms.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How far is it from the MRT station?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            D'Tessera Residences is approximately <strong>9 minutes drive to MRT Mutiara Damansara</strong>, providing excellent connectivity to the city.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>What shopping malls are nearby?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            You'll be just <strong>5 minutes away</strong> from major shopping destinations including 1 Utama, IKEA Damansara, The Curve, eCurve, and IPC Shopping Centre.
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFaq(this)">
+          <span>How do I book a unit or schedule a viewing?</span>
+          <i class="fas fa-chevron-down"></i>
+        </div>
+        <div class="faq-answer">
+          <div class="faq-answer-content">
+            Simply <strong>WhatsApp us at <a href="https://wa.me/60177544163">+6017-754 4163</a></strong> or fill in the contact form below. We'll arrange a private viewing at your convenience and bring you to the showroom.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="location" id="location">
     <div class="location-content">
       <div class="section-tag">Strategic Location</div>
@@ -753,6 +1326,28 @@
       event.target.classList.add('active');
     }
 
+    function showLayout(layout) {
+      document.querySelectorAll('.layout-content').forEach(c => c.classList.remove('active'));
+      document.querySelectorAll('.layout-tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(layout).classList.add('active');
+      event.target.classList.add('active');
+    }
+
+    function toggleFaq(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Open clicked item if it wasn't active
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    }
+
     function openLightbox(element) {
       const img = element.querySelector('img');
       document.getElementById('lightbox-img').src = img.src;
@@ -794,18 +1389,15 @@
       const unit = formData.get('unit');
       
       console.log('📤 Sending to Google Script:', Object.fromEntries(formData));
-      console.log('📋 Script URL:', SCRIPT_URL);
       
-      // Send to Google Apps Script with better error handling
+      // Send to Google Apps Script
       fetch(SCRIPT_URL, { 
         method: 'POST', 
         body: formData,
-        mode: 'no-cors' // Required for Google Apps Script
+        mode: 'no-cors'
       })
-      .then(response => {
-        console.log('✅ Response received:', response);
-        console.log('Response status:', response.status);
-        console.log('Response type:', response.type);
+      .then(() => {
+        console.log('✅ Success!');
         
         // Show success message
         status.style.display = 'block';
@@ -871,7 +1463,6 @@
     window.addEventListener('load', function() {
       console.log('🌐 D\'Tessera website loaded');
       console.log('📋 Script URL:', SCRIPT_URL);
-      console.log('✅ Form is ready to submit');
     });
   </script>
 </body>
