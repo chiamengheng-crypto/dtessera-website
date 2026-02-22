@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="D'Tessera Residences - 49-Storey Luxury Living in Central Park Damansara. 3+1 to 4+1 Bedrooms from RM837,900. Natural Waterfall View. Book Now!"/>
-  <meta name="keywords" content="D'Tessera, Exsim, Central Park Damansara, Property Malaysia, Luxury Condo"/>
   <title>D'Tessera Residences | Where Nature Meets Modern Luxury</title>
   
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,10 +29,8 @@
     html{scroll-behavior:smooth;scroll-padding-top:80px}
     body{font-family:'Montserrat',sans-serif;background:var(--white);color:var(--text);line-height:1.7;overflow-x:hidden}
 
-    /* SCROLL PROGRESS BAR */
     .scroll-progress{position:fixed;top:0;left:0;height:4px;background:linear-gradient(90deg,var(--accent),var(--secondary));z-index:9999;width:0%;transition:width 0.1s}
 
-    /* NAVIGATION */
     .header{position:fixed;top:0;width:100%;padding:25px 5%;background:rgba(255,255,255,0.98);backdrop-filter:blur(15px);display:flex;justify-content:space-between;align-items:center;z-index:1000;box-shadow:0 2px 30px rgba(0,0,0,0.08);transition:all 0.3s}
     .header.scrolled{padding:15px 5%;box-shadow:0 5px 40px rgba(0,0,0,0.12)}
     .logo{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--primary);display:flex;align-items:center;gap:10px}
@@ -48,10 +45,9 @@
     .nav-cta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(201,169,97,0.4)}
     .mobile-menu{display:none;font-size:1.8rem;cursor:pointer;color:var(--primary)}
 
-    /* HERO SECTION */
     .hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:120px 5% 80px}
     .hero-bg{position:absolute;inset:0;z-index:0}
-    .hero-bg video{width:100%;height:100%;object-fit:cover}
+    .hero-bg img{width:100%;height:100%;object-fit:cover}
     .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(26,58,46,0.9) 0%,rgba(45,90,61,0.85) 50%,rgba(15,31,26,0.85) 100%);z-index:1}
     .hero-content{position:relative;max-width:1000px;text-align:center;color:var(--white);z-index:2;animation:fadeInUp 1s ease}
     @keyframes fadeInUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:translateY(0)}}
@@ -69,19 +65,16 @@
     .btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:18px 45px;background:transparent;color:var(--white);text-decoration:none;border-radius:50px;font-weight:600;font-size:1.05rem;transition:all 0.3s;border:2px solid var(--white)}
     .btn-secondary:hover{background:var(--white);color:var(--primary);transform:translateY(-3px)}
 
-    /* WHATSAPP FLOATING */
     .btn-whatsapp{position:fixed;bottom:30px;right:30px;background:#25D366;color:var(--white);width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;text-decoration:none;box-shadow:0 6px 30px rgba(37,211,102,0.5);z-index:999;animation:pulse 2s infinite;transition:transform 0.3s}
     .btn-whatsapp:hover{transform:scale(1.1)}
     @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
-    /* SECTIONS */
     section{padding:100px 5%}
     .section-header{text-align:center;max-width:800px;margin:0 auto 60px}
     .section-tag{display:inline-block;padding:8px 25px;background:rgba(201,169,97,0.15);color:var(--accent);border-radius:50px;font-size:0.85rem;font-weight:600;margin-bottom:15px;text-transform:uppercase;letter-spacing:1.5px}
     .section-title{font-family:'Playfair Display',serif;font-size:2.8rem;color:var(--primary);margin-bottom:18px;line-height:1.2}
     .section-subtitle{color:var(--text-light);font-size:1.15rem;line-height:1.8}
 
-    /* ABOUT SECTION */
     .about{background:var(--warm);position:relative;overflow:hidden}
     .about::before{content:'';position:absolute;top:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(201,169,97,0.08) 0%,transparent 70%);border-radius:50%}
     .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto;position:relative;z-index:1}
@@ -95,23 +88,18 @@
     .about-image img{width:100%;height:auto;display:block}
     .about-image-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,58,46,0.7),transparent);display:flex;align-items:flex-end;padding:30px;color:var(--white);font-weight:600}
 
-    /* VIRTUAL TOUR SECTION */
     .virtual-tour{background:var(--white)}
     .tour-container{max-width:1400px;margin:0 auto}
-    .video-section{margin-bottom:60px}
-    .video-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:20px;box-shadow:var(--shadow-hover);background:var(--dark)}
-    .video-wrapper video,.video-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
-    .tour-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+    .tour-grid{display:grid;grid-template-columns:1fr;gap:0}
     .vr-container{background:var(--dark);border-radius:20px;overflow:hidden;box-shadow:var(--shadow-hover)}
     .vr-header{background:linear-gradient(135deg,var(--primary),var(--secondary));color:var(--white);padding:25px;text-align:center}
-    .vr-header h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:8px}
-    .vr-header p{opacity:0.9;font-size:0.95rem}
+    .vr-header h3{font-family:'Playfair Display',serif;font-size:1.8rem;margin-bottom:8px}
+    .vr-header p{opacity:0.9;font-size:1rem}
     .vr-iframe{position:relative;padding-bottom:75%;height:0;overflow:hidden;background:#000}
     .vr-iframe iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:none}
     .vr-controls{background:var(--light);padding:20px;text-align:center;color:var(--text-light);font-size:0.9rem}
     .vr-controls i{color:var(--accent);margin-right:8px}
 
-    /* GALLERY SECTION */
     .gallery{background:linear-gradient(to bottom,var(--warm),var(--white))}
     .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:25px;max-width:1400px;margin:0 auto}
     .gallery-item{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:4/3;cursor:pointer;box-shadow:var(--shadow);transition:all 0.4s}
@@ -123,7 +111,6 @@
     .gallery-overlay h4{color:var(--white);font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:5px}
     .gallery-overlay p{color:rgba(255,255,255,0.85);font-size:0.9rem}
 
-    /* FLOOR PLANS */
     .floorplans{background:var(--light)}
     .floorplan-tabs{display:flex;justify-content:center;gap:15px;margin-bottom:50px;flex-wrap:wrap}
     .tab-btn{padding:14px 35px;background:var(--white);border:2px solid transparent;color:var(--text);border-radius:50px;cursor:pointer;font-weight:600;font-size:0.95rem;transition:all 0.3s;box-shadow:0 3px 15px rgba(0,0,0,0.08)}
@@ -132,7 +119,7 @@
     .floorplan-content.active{display:block}
     @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
     .floorplan-showcase{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;background:var(--white);padding:50px;border-radius:25px;box-shadow:var(--shadow)}
-    .floorplan-visual{background:var(--light);border-radius:18px;height:500px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+    .floorplan-visual{background:var(--light);border-radius:18px;height:550px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
     .floorplan-visual img{width:100%;height:100%;object-fit:contain;padding:30px;transition:transform 0.5s}
     .floorplan-visual:hover img{transform:scale(1.05)}
     .floorplan-info h3{font-family:'Playfair Display',serif;font-size:2rem;color:var(--primary);margin-bottom:10px}
@@ -147,7 +134,6 @@
     .floorplan-features li{padding:10px 0;padding-left:32px;position:relative;color:var(--text-light)}
     .floorplan-features li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;color:var(--secondary)}
 
-    /* USP SECTION */
     .usp{background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);color:var(--white);position:relative;overflow:hidden}
     .usp::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(201,169,97,0.1) 0%,transparent 60%);animation:rotate 40s linear infinite}
     @keyframes rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
@@ -160,7 +146,6 @@
     .usp-card h3{font-family:'Playfair Display',serif;font-size:1.4rem;margin-bottom:15px}
     .usp-card p{opacity:0.9;line-height:1.7;font-size:0.95rem}
 
-    /* AMENITIES */
     .amenities{background:var(--warm)}
     .amenities-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;max-width:1200px;margin:0 auto}
     .amenity-card{background:var(--white);padding:35px 28px;border-radius:18px;text-align:center;box-shadow:var(--shadow);transition:all 0.4s;position:relative;overflow:hidden}
@@ -171,55 +156,24 @@
     .amenity-card h4{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:10px;color:var(--primary)}
     .amenity-card p{color:var(--text-light);font-size:0.9rem}
 
-    /* LOCATION */
     .location{background:var(--white)}
-    .location-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;align-items:center;max-width:1300px;margin:0 auto}
+    .location-content{text-align:center;max-width:1200px;margin:0 auto}
     .location-content h3{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--primary);margin-bottom:20px}
-    .location-content > p{color:var(--text-light);margin-bottom:35px;line-height:1.8}
-    .location-features{margin:30px 0}
-    .location-item{display:flex;gap:18px;margin-bottom:25px;align-items:flex-start}
-    .location-item i{width:45px;height:45px;background:rgba(201,169,97,0.15);border-radius:12px;display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:1.1rem;flex-shrink:0}
-    .location-item div strong{display:block;color:var(--primary);margin-bottom:4px;font-size:1.05rem}
-    .location-item div p{color:var(--text-light);font-size:0.95rem;line-height:1.6}
-    .map-wrapper{border-radius:25px;overflow:hidden;box-shadow:var(--shadow-hover);height:550px}
-    .map-wrapper iframe{width:100%;height:100%;border:none}
+    .location-content > p{color:var(--text-light);margin-bottom:40px;line-height:1.8;max-width:800px;margin-left:auto;margin-right:auto}
+    .location-map{background:var(--dark);border-radius:25px;overflow:hidden;box-shadow:var(--shadow-hover);padding:30px}
+    .location-map img{width:100%;height:auto;display:block;border-radius:15px}
+    .location-features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px;margin-top:50px}
+    .location-item{text-align:center;padding:25px;background:var(--light);border-radius:15px;transition:transform 0.3s}
+    .location-item:hover{transform:translateY(-5px)}
+    .location-item i{font-size:2rem;color:var(--accent);margin-bottom:15px}
+    .location-item strong{display:block;color:var(--primary);margin-bottom:8px;font-size:1.1rem}
+    .location-item p{color:var(--text-light);font-size:0.95rem;line-height:1.6}
 
-    /* DEVELOPER SECTION */
-    .developer{background:linear-gradient(to bottom,var(--light),var(--warm))}
-    .dev-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;max-width:1200px;margin:0 auto}
-    .dev-image{border-radius:20px;overflow:hidden;box-shadow:var(--shadow-hover)}
-    .dev-image img{width:100%;height:auto;display:block}
-    .dev-content h3{font-family:'Playfair Display',serif;font-size:2.2rem;color:var(--primary);margin-bottom:20px}
-    .dev-content p{color:var(--text-light);margin-bottom:20px;line-height:1.8}
-    .dev-achievements{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:30px}
-    .achievement{background:var(--white);padding:25px;border-radius:15px;text-align:center;box-shadow:var(--shadow)}
-    .achievement-number{font-size:2.2rem;font-weight:700;color:var(--accent);display:block;line-height:1}
-    .achievement-label{color:var(--text-light);font-size:0.9rem;margin-top:5px}
-
-    /* TESTIMONIALS */
-    .testimonials{background:var(--white)}
-    .testimonial-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:35px;max-width:1200px;margin:0 auto}
-    .testimonial-card{background:var(--light);padding:40px;border-radius:20px;position:relative}
-    .testimonial-card::before{content:'\201c';font-family:'Playfair Display',serif;font-size:6rem;color:var(--accent);opacity:0.3;position:absolute;top:10px;left:25px;line-height:1}
-    .testimonial-text{color:var(--text-light);margin-bottom:25px;line-height:1.8;position:relative;z-index:1}
-    .testimonial-author{display:flex;align-items:center;gap:15px}
-    .author-avatar{width:55px;height:55px;background:linear-gradient(135deg,var(--accent),var(--secondary));border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);font-weight:600;font-size:1.2rem}
-    .author-info strong{display:block;color:var(--primary)}
-    .author-info span{color:var(--text-light);font-size:0.9rem}
-
-    /* CONTACT */
     .contact{background:linear-gradient(135deg,var(--dark) 0%,var(--primary) 100%);color:var(--white);position:relative;overflow:hidden}
     .contact::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23c9a961\" fill-opacity=\"0.05\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>');opacity:0.5}
     .contact .section-title{color:var(--white)}
     .contact .section-subtitle{color:rgba(255,255,255,0.85)}
-    .contact-wrapper{display:grid;grid-template-columns:1fr 1.2fr;gap:60px;max-width:1200px;margin:0 auto;position:relative;z-index:1}
-    .contact-info{display:flex;flex-direction:column;gap:30px}
-    .contact-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);padding:35px;border-radius:20px;border:1px solid rgba(255,255,255,0.15);display:flex;gap:20px;align-items:flex-start;transition:all 0.3s}
-    .contact-card:hover{transform:translateX(8px);background:rgba(255,255,255,0.12)}
-    .contact-card i{font-size:1.8rem;color:var(--accent);margin-top:5px}
-    .contact-card div h4{font-size:1.2rem;margin-bottom:10px}
-    .contact-card div p,.contact-card div a{color:rgba(255,255,255,0.9);text-decoration:none;line-height:1.7}
-    .contact-card div a:hover{color:var(--accent)}
+    .contact-wrapper{max-width:800px;margin:0 auto;position:relative;z-index:1}
     .contact-form-wrapper{background:rgba(255,255,255,0.08);backdrop-filter:blur(10px);padding:50px;border-radius:25px;border:1px solid rgba(255,255,255,0.15)}
     .form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:20px}
     .form-group{margin-bottom:20px}
@@ -229,37 +183,27 @@
     .form-group textarea{height:130px;resize:vertical}
     .submit-btn{width:100%;padding:20px;background:linear-gradient(135deg,var(--accent),var(--accent-light));color:var(--white);border:none;border-radius:50px;font-weight:700;font-size:1.1rem;cursor:pointer;transition:all 0.3s;box-shadow:0 8px 25px rgba(201,169,97,0.4)}
     .submit-btn:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(201,169,97,0.55)}
+    .submit-btn:disabled{opacity:0.6;cursor:not-allowed}
 
-    /* FOOTER */
     footer{background:var(--dark);color:rgba(255,255,255,0.85);padding:50px 5% 30px}
-    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:50px;max-width:1300px;margin:0 auto 40px}
-    .footer-brand .logo{margin-bottom:20px;color:var(--white)}
-    .footer-brand p{line-height:1.8;margin-bottom:25px;color:rgba(255,255,255,0.75)}
-    .footer-social{display:flex;gap:15px}
-    .footer-social a{width:42px;height:42px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--white);transition:all 0.3s}
-    .footer-social a:hover{background:var(--accent);transform:translateY(-3px)}
-    .footer-links h4{color:var(--white);margin-bottom:25px;font-size:1.1rem}
-    .footer-links ul{list-style:none}
-    .footer-links li{margin-bottom:12px}
-    .footer-links a{color:rgba(255,255,255,0.75);text-decoration:none;transition:color 0.3s}
-    .footer-links a:hover{color:var(--accent)}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:30px;text-align:center;color:rgba(255,255,255,0.6);font-size:0.9rem;max-width:1300px;margin:0 auto}
+    .footer-content{max-width:1200px;margin:0 auto;text-align:center}
+    .footer-brand .logo{margin-bottom:20px;color:var(--white);justify-content:center}
+    .footer-brand p{line-height:1.8;margin-bottom:25px;color:rgba(255,255,255,0.75);max-width:600px;margin-left:auto;margin-right:auto}
+    .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding-top:30px;margin-top:30px;color:rgba(255,255,255,0.6);font-size:0.9rem}
 
-    /* LIGHTBOX */
     .lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.98);z-index:2000;align-items:center;justify-content:center;padding:40px}
     .lightbox.active{display:flex}
     .lightbox img{max-width:95%;max-height:95%;object-fit:contain;border-radius:10px}
     .lightbox-close{position:absolute;top:30px;right:40px;color:var(--white);font-size:3.5rem;cursor:pointer;transition:color 0.3s;width:60px;height:60px;display:flex;align-items:center;justify-content:center}
     .lightbox-close:hover{color:var(--accent)}
 
-    /* RESPONSIVE */
     @media(max-width:1024px){
       .hero-content h1{font-size:3.2rem}
-      .about-grid,.tour-grid,.floorplan-showcase,.location-grid,.dev-grid,.contact-wrapper{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr 1fr}
+      .about-grid,.floorplan-showcase{grid-template-columns:1fr}
       nav{display:none}
       .mobile-menu{display:block}
       .form-row{grid-template-columns:1fr}
+      .vr-iframe{padding-bottom:100%}
     }
     @media(max-width:600px){
       .hero-content h1{font-size:2.4rem}
@@ -267,17 +211,14 @@
       .stat-number{font-size:2.2rem}
       .section-title{font-size:2.1rem}
       .about-features,.floorplan-info .specs{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
       .btn-primary,.btn-secondary{width:100%;justify-content:center}
     }
   </style>
 </head>
 <body>
 
-  <!-- SCROLL PROGRESS -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- HEADER -->
   <header class="header" id="header">
     <div class="logo">
       <div class="logo-icon"><i class="fas fa-building"></i></div>
@@ -296,12 +237,9 @@
     <div class="mobile-menu"><i class="fas fa-bars"></i></div>
   </header>
 
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-bg">
-      <video autoplay muted loop playsinline poster="https://image.qwenlm.ai/public_source/03702030-9a5e-490a-88bb-4611c710de6d/1900d4e6e-5b11-45b7-8dba-4b499447154f9477.png">
-        <source src="https://video.wixstatic.com/video/11062b_407e13c69b8041af88725714590d991a/480p/mp4/file.mp4" type="video/mp4">
-      </video>
+      <img src="https://image.qwenlm.ai/public_source/03702030-9a5e-490a-88bb-4611c710de6d/2900d4e6e-5b11-45b7-8dba-4b499447154f4752.png" alt="D'Tessera Hero">
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -336,13 +274,12 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
   <section class="about" id="about">
     <div class="about-grid">
       <div class="about-content">
         <div class="section-tag">About The Development</div>
         <h3>A Mosaic of Living Excellence</h3>
-        <p>D'Tessera Residences draws inspiration from mosaic masterpieces, where individual elements unite to create breathtaking harmony. This 49-storey architectural landmark represents Exsim Group's commitment to creating homes that transcend ordinary living.</p>
+        <p>D'Tessera Residences draws inspiration from mosaic masterpieces, where individual elements unite to create breathtaking harmony. This 49-storey architectural landmark represents excellence in creating homes that transcend ordinary living.</p>
         <p>Strategically located in the vibrant Central Park Damansara township, D'Tessera offers 671 thoughtfully designed units ranging from 1,100 to 1,331 square feet. Each residence is crafted to provide the perfect balance between urban convenience and natural serenity.</p>
         <p>With a stunning 10-acre park at your doorstep and premium facilities spanning from the ground level to the exclusive sky deck on Level 49, D'Tessera redefines contemporary luxury living in the heart of Petaling Jaya.</p>
         
@@ -362,7 +299,6 @@
     </div>
   </section>
 
-  <!-- VIRTUAL TOUR -->
   <section class="virtual-tour" id="virtual">
     <div class="tour-container">
       <div class="section-header">
@@ -371,20 +307,11 @@
         <p class="section-subtitle">Take a virtual journey through our show units and experience the layout, finishes, and spatial design from anywhere in the world</p>
       </div>
 
-      <div class="video-section">
-        <div class="video-wrapper">
-          <video controls poster="https://image.qwenlm.ai/public_source/03702030-9a5e-490a-88bb-4611c710de6d/03702030-9a5e-490a-88bb-4611c710de6d/5900d4e6e-5b11-45b7-8dba-4b499447154f4798.png">
-            <source src="https://video.wixstatic.com/video/11062b_407e13c69b8041af88725714590d991a/480p/mp4/file.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-        </div>
-      </div>
-
       <div class="tour-grid">
         <div class="vr-container">
           <div class="vr-header">
             <h3><i class="fas fa-vr-cardboard"></i> 360° Virtual Showroom</h3>
-            <p>Interactive Tour - Type A2 & Type B3 Units</p>
+            <p>Interactive Tour - Type A2 & Type B3 Units - Click and drag to navigate</p>
           </div>
           <div class="vr-iframe">
             <iframe src="https://360vr.my/exsim/dtessera/" title="D'Tessera 360° Virtual Tour" allow="fullscreen; xr-spatial-tracking" allowfullscreen></iframe>
@@ -393,22 +320,10 @@
             <i class="fas fa-mouse-pointer"></i> Click & drag to navigate • Scroll to zoom • Click hotspots to move between rooms
           </div>
         </div>
-
-        <div style="background:var(--light);padding:40px;border-radius:20px;display:flex;flex-direction:column;justify-content:center">
-          <h3 style="font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--primary);margin-bottom:20px">Virtual Tour Features</h3>
-          <ul style="list-style:none;margin:20px 0">
-            <li style="padding:15px 0;border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:15px"><i class="fas fa-check-circle" style="color:var(--accent)"></i><div><strong>Photorealistic Quality</strong><br><span style="color:var(--text-light);font-size:0.9rem">High-resolution 360° photography</span></div></li>
-            <li style="padding:15px 0;border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:15px"><i class="fas fa-check-circle" style="color:var(--accent)"></i><div><strong>Multiple Unit Types</strong><br><span style="color:var(--text-light);font-size:0.9rem">Explore Type A2 & B3 show units</span></div></li>
-            <li style="padding:15px 0;border-bottom:1px solid rgba(0,0,0,0.08);display:flex;align-items:center;gap:15px"><i class="fas fa-check-circle" style="color:var(--accent)"></i><div><strong>Interactive Hotspots</strong><br><span style="color:var(--text-light);font-size:0.9rem">Click to move between rooms</span></div></li>
-            <li style="padding:15px 0;display:flex;align-items:center;gap:15px"><i class="fas fa-check-circle" style="color:var(--accent)"></i><div><strong>Mobile Compatible</strong><br><span style="color:var(--text-light);font-size:0.9rem">View on any device</span></div></li>
-          </ul>
-          <a href="#contact" class="btn-primary" style="margin-top:25px;text-align:center;justify-content:center"><i class="fas fa-calendar"></i> Schedule Live Virtual Tour</a>
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
   <section class="gallery" id="gallery">
     <div class="section-header">
       <div class="section-tag">Photo Gallery</div>
@@ -444,7 +359,6 @@
     </div>
   </section>
 
-  <!-- FLOOR PLANS -->
   <section class="floorplans" id="floorplans">
     <div class="section-header">
       <div class="section-tag">Unit Selection</div>
@@ -462,7 +376,7 @@
     <div id="typeA" class="floorplan-content active">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Type+A+Floor+Plan+-+1100+sqft" alt="Type A Floor Plan">
+          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-a.jpg" alt="Type A Floor Plan" id="floorplan-typeA" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+A+Floor+Plan+-+1100+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type A1 - A6</h3>
@@ -494,7 +408,7 @@
     <div id="typeB" class="floorplan-content">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Type+B+Floor+Plan+-+1300+sqft" alt="Type B Floor Plan">
+          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-b.jpg" alt="Type B Floor Plan" id="floorplan-typeB" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+B+Floor+Plan+-+1300+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type B1 - B4</h3>
@@ -526,7 +440,7 @@
     <div id="typeC" class="floorplan-content">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Type+C+Floor+Plan+-+1129+sqft" alt="Type C Floor Plan">
+          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-c.jpg" alt="Type C Floor Plan" id="floorplan-typeC" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+C+Floor+Plan+-+1129+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type C1 - C2 (Elderly-Friendly)</h3>
@@ -558,7 +472,7 @@
     <div id="typeD" class="floorplan-content">
       <div class="floorplan-showcase">
         <div class="floorplan-visual">
-          <img src="https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Type+D+Floor+Plan+-+1331+sqft" alt="Type D Floor Plan">
+          <img src="https://tessera-showroom.preview.emergentagent.com/assets/floorplan-type-d.jpg" alt="Type D Floor Plan" id="floorplan-typeD" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+D+Floor+Plan+-+1331+sqft'">
         </div>
         <div class="floorplan-info">
           <h3>Type D1 - D2 (Elderly-Friendly Corner Unit)</h3>
@@ -588,7 +502,6 @@
     </div>
   </section>
 
-  <!-- USP -->
   <section class="usp">
     <div class="section-header">
       <div class="section-tag" style="background:rgba(255,255,255,0.15);color:var(--white)">Why Choose D'Tessera</div>
@@ -630,7 +543,6 @@
     </div>
   </section>
 
-  <!-- AMENITIES -->
   <section class="amenities" id="amenities">
     <div class="section-header">
       <div class="section-tag">World-Class Facilities</div>
@@ -702,141 +614,55 @@
     </div>
   </section>
 
-  <!-- LOCATION -->
   <section class="location" id="location">
-    <div class="location-grid">
-      <div class="location-content">
-        <div class="section-tag" style="text-align:left">Prime Location</div>
-        <h3>Central Park Damansara</h3>
-        <p>Strategically positioned in one of Petaling Jaya's most sought-after addresses, D'Tessera offers unparalleled connectivity and convenience.</p>
-        
-        <div class="location-features">
-          <div class="location-item">
-            <i class="fas fa-shopping-mall"></i>
-            <div><strong>Shopping & Dining</strong><p>5 mins to 1 Utama, IKEA, The Curve, eCurve & IPC Shopping Centre</p></div>
-          </div>
-          <div class="location-item">
-            <i class="fas fa-train"></i>
-            <div><strong>Public Transport</strong><p>9 mins to MRT Mutiara Damansara • Easy access to LDP, Sprint & NKVE highways</p></div>
-          </div>
-          <div class="location-item">
-            <i class="fas fa-graduation-cap"></i>
-            <div><strong>Education</strong><p>Near international schools • Tunku Kurshiah College • SMJK Chung Hwa</p></div>
-          </div>
-          <div class="location-item">
-            <i class="fas fa-hospital"></i>
-            <div><strong>Healthcare</strong><p>10 mins to KPJ Damansara • Columbia Asia • Pantai Hospital</p></div>
-          </div>
-          <div class="location-item">
-            <i class="fas fa-tree"></i>
-            <div><strong>Nature & Recreation</strong><p>Adjacent to Bukit Lanjan Forest Reserve • 10-acre Central Park</p></div>
-          </div>
-        </div>
-        
-        <a href="https://www.google.com/maps/place/Central+Park+Damansara" target="_blank" class="btn-primary" style="margin-top:20px"><i class="fas fa-map-marked-alt"></i> Get Directions</a>
+    <div class="location-content">
+      <div class="section-tag">Strategic Location</div>
+      <h2 class="section-title">Central Park Damansara</h2>
+      <p>Strategically positioned in one of Petaling Jaya's most sought-after addresses with excellent connectivity to major highways, shopping malls, schools, and healthcare facilities.</p>
+      
+      <div class="location-map">
+        <img src="location-map.jpg" alt="D'Tessera Location Map" style="width:100%;border-radius:15px" onerror="this.style.display='none';this.parentElement.innerHTML='<p style=\'color:white;padding:40px;\'>Location map will be displayed here. Please upload location-map.jpg to your project folder.</p>'">
       </div>
       
-      <div class="map-wrapper">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.8472677378!2d101.6165!3d3.1569!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31cc48f5e5b5b5b5%3A0x5b5b5b5b5b5b5b5b!2sCentral%20Park%20Damansara!5e0!3m2!1sen!2smy!4v1234567890" allowfullscreen loading="lazy"></iframe>
-      </div>
-    </div>
-  </section>
-
-  <!-- DEVELOPER -->
-  <section class="developer">
-    <div class="dev-grid">
-      <div class="dev-image">
-        <img src="https://via.placeholder.com/700x500/1a3a2e/c9a961?text=Exsim+Group+Logo" alt="Exsim Group">
-      </div>
-      <div class="dev-content">
-        <div class="section-tag" style="text-align:left">Trusted Developer</div>
-        <h3>Exsim Group</h3>
-        <p>Exsim Group is a renowned property developer with a proven track record of delivering quality developments that enhance communities and provide exceptional value to homeowners.</p>
-        <p>With decades of experience in the Malaysian property market, Exsim has established itself as a trusted name, committed to excellence in design, construction, and customer satisfaction.</p>
-        <p>D'Tessera Residences represents the culmination of Exsim's expertise - a development that seamlessly blends modern architecture with natural beauty, creating a living space that truly stands out.</p>
-        
-        <div class="dev-achievements">
-          <div class="achievement">
-            <span class="achievement-number">30+</span>
-            <div class="achievement-label">Years Experience</div>
-          </div>
-          <div class="achievement">
-            <span class="achievement-number">50+</span>
-            <div class="achievement-label">Projects Completed</div>
-          </div>
-          <div class="achievement">
-            <span class="achievement-number">10,000+</span>
-            <div class="achievement-label">Happy Homeowners</div>
-          </div>
-          <div class="achievement">
-            <span class="achievement-number">15+</span>
-            <div class="achievement-label">Industry Awards</div>
-          </div>
+      <div class="location-features">
+        <div class="location-item">
+          <i class="fas fa-shopping-mall"></i>
+          <strong>Shopping & Dining</strong>
+          <p>5 mins to 1 Utama, IKEA, The Curve, eCurve & IPC Shopping Centre</p>
+        </div>
+        <div class="location-item">
+          <i class="fas fa-train"></i>
+          <strong>Public Transport</strong>
+          <p>9 mins to MRT Mutiara Damansara • Easy access to LDP, Sprint & NKVE highways</p>
+        </div>
+        <div class="location-item">
+          <i class="fas fa-graduation-cap"></i>
+          <strong>Education</strong>
+          <p>Near international schools • Tunku Kurshiah College • SMJK Chung Hwa</p>
+        </div>
+        <div class="location-item">
+          <i class="fas fa-hospital"></i>
+          <strong>Healthcare</strong>
+          <p>10 mins to KPJ Damansara • Columbia Asia • Pantai Hospital</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="section-header">
       <div class="section-tag" style="background:rgba(255,255,255,0.15);color:var(--white)">Get In Touch</div>
-      <h2 class="section-title">Schedule Your Viewing</h2>
-      <p class="section-subtitle">Contact us today to arrange a private tour of D'Tessera Residences or request more information</p>
+      <h2 class="section-title">Schedule Your Private Viewing</h2>
+      <p class="section-subtitle">Contact us today to arrange a private tour of D'Tessera Residences. We'll be happy to bring you to the showroom at your convenience.</p>
     </div>
     
     <div class="contact-wrapper">
-      <div class="contact-info">
-        <div class="contact-card">
-          <i class="fab fa-whatsapp"></i>
-          <div>
-            <h4>WhatsApp</h4>
-            <a href="https://wa.me/60177544163" target="_blank">+6017-754 4163</a>
-            <p style="font-size:0.9rem;margin-top:5px;opacity:0.8">Fastest response • Available 7 days</p>
-          </div>
-        </div>
-        
-        <div class="contact-card">
-          <i class="fas fa-phone"></i>
-          <div>
-            <h4>Phone</h4>
-            <a href="tel:+60177544163">+6017-754 4163</a>
-            <p style="font-size:0.9rem;margin-top:5px;opacity:0.8">Mon-Sat: 9am-6pm</p>
-          </div>
-        </div>
-        
-        <div class="contact-card">
-          <i class="fas fa-envelope"></i>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:vincent.chiameh@gmail.com">vincent.chiameh@gmail.com</a>
-            <p style="font-size:0.9rem;margin-top:5px;opacity:0.8">We'll respond within 24 hours</p>
-          </div>
-        </div>
-        
-        <div class="contact-card">
-          <i class="fas fa-map-marker-alt"></i>
-          <div>
-            <h4>Showroom Address</h4>
-            <p>G89K & 89L, Ground Level<br>Empire Damansara<br>Jalan PJU 8/8, Damansara Perdana<br>47820 Petaling Jaya, Selangor</p>
-          </div>
-        </div>
-        
-        <div class="contact-card">
-          <i class="fas fa-user-tie"></i>
-          <div>
-            <h4>Vincent Chi</h4>
-            <p>Licensed Property Agent<br>Exsim Authorized Dealer<br>REN Certified</p>
-          </div>
-        </div>
-      </div>
-      
       <div class="contact-form-wrapper">
-        <form onsubmit="handleSubmit(event)">
+        <form id="contactForm" onsubmit="handleGoogleForm(event)">
           <div class="form-row">
             <div class="form-group">
               <label>Full Name *</label>
-              <input type="text" name="name" required placeholder="Enter your full name">
+              <input type="text" name="name" id="contactName" required placeholder="Enter your full name">
             </div>
             <div class="form-group">
               <label>WhatsApp Number *</label>
@@ -866,97 +692,52 @@
             <textarea name="message" placeholder="Tell me more about... I'm interested in..."></textarea>
           </div>
           
-          <button type="submit" class="submit-btn">
+          <button type="submit" class="submit-btn" id="submitBtn">
             <i class="fas fa-paper-plane"></i> Send Inquiry
           </button>
           
-          <p style="text-align:center;margin-top:20px;color:rgba(255,255,255,0.7);font-size:0.9rem">
-            <i class="fas fa-lock"></i> Your information is secure and will never be shared
-          </p>
+          <p id="formStatus" style="text-align:center;margin-top:20px;font-size:0.95rem;display:none;padding:15px;border-radius:10px;"></p>
         </form>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
-    <div class="footer-grid">
+    <div class="footer-content">
       <div class="footer-brand">
-        <div class="logo" style="color:var(--white)">
+        <div class="logo">
           <div class="logo-icon"><i class="fas fa-building"></i></div>
           D'Tessera<span>.</span>
         </div>
         <p>Where Nature Meets Modern Luxury. Experience spacious living in Central Park Damansara's premier 49-storey residence.</p>
-        <div class="footer-social">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
-          <a href="#"><i class="fab fa-youtube"></i></a>
-          <a href="https://wa.me/60177544163"><i class="fab fa-whatsapp"></i></a>
-        </div>
       </div>
       
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#floorplans">Floor Plans</a></li>
-          <li><a href="#amenities">Facilities</a></li>
-          <li><a href="#location">Location</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+      <div class="footer-bottom">
+        <p>&copy; 2026 D'Tessera Residences • Developed by Exsim Group</p>
+        <p style="margin-top:10px">Vincent Chi • Property Consultant • +6017-754 4163 • vincent.chiameh@gmail.com</p>
       </div>
-      
-      <div class="footer-links">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="#virtual">Virtual Tour</a></li>
-          <li><a href="#gallery">Gallery</a></li>
-          <li><a href="#">Brochure Download</a></li>
-          <li><a href="#">Payment Schedule</a></li>
-          <li><a href="#">FAQ</a></li>
-        </ul>
-      </div>
-      
-      <div class="footer-links">
-        <h4>Legal</h4>
-        <ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Disclaimer</a></li>
-        </ul>
-        <p style="margin-top:20px;font-size:0.85rem;color:rgba(255,255,255,0.6)">
-          <strong>Disclaimer:</strong> All information deemed reliable but not guaranteed. Images are artist's impressions. Subject to terms & conditions.
-        </p>
-      </div>
-    </div>
-    
-    <div class="footer-bottom">
-      <p>&copy; 2026 D'Tessera Residences • Developed by Exsim Group</p>
-      <p style="margin-top:10px">Vincent Chi • Property Consultant • +6017-754 4163 • vincent.chiameh@gmail.com</p>
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOATING -->
-  <a href="https://wa.me/60177544163" class="btn-whatsapp" target="_blank" title="Chat on WhatsApp">
+  <a href="#" class="btn-whatsapp" onclick="openWhatsApp(); return false;" title="Chat on WhatsApp">
     <i class="fab fa-whatsapp"></i>
   </a>
 
-  <!-- LIGHTBOX -->
   <div class="lightbox" id="lightbox" onclick="closeLightbox()">
     <span class="lightbox-close">&times;</span>
     <img src="" alt="Gallery Image" id="lightbox-img">
   </div>
 
-  <!-- JAVASCRIPT -->
   <script>
-    // Scroll Progress Bar
+    // Google Apps Script URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx78EBcc0vv2hKBYopDwBmRrSuCAIuGEm6I-lKg1zCVPW-DY4sBiKk828VdH4irtyg/exec';
+
     window.addEventListener('scroll', function() {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrolled = (winScroll / height) * 100;
       document.getElementById('scrollProgress').style.width = scrolled + '%';
       
-      // Header scroll effect
       const header = document.getElementById('header');
       if(window.scrollY > 100) {
         header.classList.add('scrolled');
@@ -965,7 +746,6 @@
       }
     });
 
-    // Floor Plan Tabs
     function showFloorplan(type) {
       document.querySelectorAll('.floorplan-content').forEach(c => c.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -973,7 +753,6 @@
       event.target.classList.add('active');
     }
 
-    // Lightbox
     function openLightbox(element) {
       const img = element.querySelector('img');
       document.getElementById('lightbox-img').src = img.src;
@@ -986,27 +765,83 @@
       document.body.style.overflow = 'auto';
     }
 
-    // Form Submission
-    function handleSubmit(e) {
-      e.preventDefault();
-      const formData = new FormData(e.target);
-      const data = Object.fromEntries(formData);
-      
-      alert(`Thank you ${data.name}!\n\n✅ Your inquiry has been received.\n\n📧 Details sent to: ${data.email || 'your email'}\n📱 We'll WhatsApp you at: ${data.phone}\n\nVincent will contact you within 1 hour during business hours.\n\n🏡 You'll receive:\n• Detailed floor plans\n• Pricing & payment schedule\n• Exclusive promotions\n• Booking information`);
-      
-      e.target.reset();
-      
-      // In production, send to Formspree:
-      /*
-      fetch('https://formspree.io/f/YOUR_FORM_ID', {
-        method: 'POST',
-        body: formData,
-        headers: {'Accept': 'application/json'}
-      });
-      */
+    function openWhatsApp() {
+      const phoneNumber = '60177544163';
+      const message = encodeURIComponent(
+        'Hi, I am [Your Name]\n\n' +
+        'I am interested on D\'Tessera project and would like know more details about the project.'
+      );
+      const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+      window.open(whatsappURL, '_blank');
     }
 
-    // Smooth scroll for navigation
+    function handleGoogleForm(e) {
+      e.preventDefault();
+      
+      const btn = document.getElementById('submitBtn');
+      const status = document.getElementById('formStatus');
+      const form = e.target;
+      
+      // Disable button and show loading
+      btn.disabled = true;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+      status.style.display = 'none';
+      
+      // Get form data
+      const formData = new FormData(form);
+      const name = formData.get('name');
+      const phone = formData.get('phone');
+      const unit = formData.get('unit');
+      
+      // Send to Google Apps Script
+      fetch(SCRIPT_URL, { 
+        method: 'POST', 
+        body: formData,
+        mode: 'no-cors'
+      })
+      .then(() => {
+        // Show success message
+        status.style.display = 'block';
+        status.style.background = 'rgba(37, 211, 102, 0.2)';
+        status.style.color = '#25D366';
+        status.innerHTML = '<i class="fas fa-check-circle"></i> <strong>Thank you!</strong> Your inquiry has been sent successfully. We will contact you soon.';
+        
+        // Reset form
+        form.reset();
+        
+        // Prepare WhatsApp message
+        const whatsappMessage = encodeURIComponent(
+          `Hi, I am ${name}\n\n` +
+          `I am interested on D'Tessera project and would like to know more details about the project.\n\n` +
+          `📱 Contact: ${phone}\n` +
+          `🏠 Preferred Unit: ${unit}`
+        );
+        
+        // Open WhatsApp after 1.5 seconds
+        setTimeout(() => {
+          const whatsappURL = `https://wa.me/60177544163?text=${whatsappMessage}`;
+          window.open(whatsappURL, '_blank');
+        }, 1500);
+        
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        status.style.display = 'block';
+        status.style.background = 'rgba(239, 68, 68, 0.2)';
+        status.style.color = '#ef4444';
+        status.innerHTML = '<i class="fas fa-exclamation-circle"></i> There was an error. Please WhatsApp us directly at +6017-754 4163';
+      })
+      .finally(() => {
+        btn.disabled = false;
+        btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
+        
+        // Hide status after 8 seconds
+        setTimeout(() => {
+          status.style.display = 'none';
+        }, 8000);
+      });
+    }
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -1017,12 +852,10 @@
       });
     });
 
-    // Close lightbox with Escape key
     document.addEventListener('keydown', function(e) {
       if(e.key === 'Escape') closeLightbox();
     });
 
-    // Mobile menu toggle (basic)
     document.querySelector('.mobile-menu').addEventListener('click', function() {
       alert('Mobile menu - Add mobile navigation functionality here');
     });
