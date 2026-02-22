@@ -132,7 +132,6 @@
     .amenity-card h4{font-family:'Playfair Display',serif;font-size:1.2rem;margin-bottom:10px;color:var(--primary)}
     .amenity-card p{color:var(--text-light);font-size:0.9rem}
 
-    /* FACILITIES SECTION - SPLIT INTO 2 PARTS */
     .facilities{background:var(--white)}
     .facilities-split{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-bottom:60px;align-items:center}
     .facilities-split.reverse{direction:rtl}
@@ -147,7 +146,6 @@
     .facility-item i{color:var(--accent);font-size:1.2rem;margin-top:3px}
     .facility-item div{font-weight:500;color:var(--text)}
 
-    /* LAYOUT PLAN SECTION WITH TABS */
     .layout-plan{background:var(--light)}
     .layout-tabs{display:flex;justify-content:center;gap:15px;margin-bottom:50px;flex-wrap:wrap}
     .layout-tab-btn{padding:12px 25px;background:var(--white);border:2px solid transparent;color:var(--text);border-radius:50px;cursor:pointer;font-weight:600;font-size:0.9rem;transition:all 0.3s;box-shadow:0 3px 15px rgba(0,0,0,0.08)}
@@ -167,7 +165,6 @@
     .layout-features-list li{padding:8px 0;padding-left:28px;position:relative;color:var(--text-light)}
     .layout-features-list li::before{content:attr(data-number) '. ';position:absolute;left:0;color:var(--accent);font-weight:600}
 
-    /* FAQ SECTION */
     .faq{background:var(--warm)}
     .faq-container{max-width:900px;margin:0 auto}
     .faq-item{background:var(--white);margin-bottom:20px;border-radius:15px;overflow:hidden;box-shadow:var(--shadow)}
@@ -195,7 +192,7 @@
     .location-item p{color:var(--text-light);font-size:0.95rem;line-height:1.6}
 
     .contact{background:linear-gradient(135deg,var(--dark) 0%,var(--primary) 100%);color:var(--white);position:relative;overflow:hidden}
-    .contact::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"><g fill=\"none\" fill-rule=\"evenodd\"><g fill=\"%23c9a961\" fill-opacity=\"0.05\"><path d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/></g></g></svg>');opacity:0.5}
+    .contact::before{content:'';position:absolute;inset:0;background:url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23c9a961" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');opacity:0.5}
     .contact .section-title{color:var(--white)}
     .contact .section-subtitle{color:rgba(255,255,255,0.85)}
     .contact-wrapper{max-width:800px;margin:0 auto;position:relative;z-index:1}
@@ -226,8 +223,30 @@
       .hero-content h1{font-size:3.2rem}
       .about-grid,.facilities-split,.layout-showcase{grid-template-columns:1fr}
       .facilities-split.reverse{direction:ltr}
-      nav{display:none}
-      .mobile-menu{display:block}
+      nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        right:0;
+        background:rgba(255,255,255,0.98);
+        flex-direction:column;
+        padding:20px;
+        gap:15px;
+        box-shadow:0 5px 20px rgba(0,0,0,0.1);
+        z-index:999;
+      }
+      nav.active{
+        display:flex;
+      }
+      nav a{
+        margin-left:0;
+        padding:10px;
+        text-align:center;
+      }
+      .mobile-menu{
+        display:block;
+      }
       .form-row{grid-template-columns:1fr}
       .vr-iframe{padding-bottom:100%}
       .facilities-list{grid-template-columns:1fr}
@@ -497,7 +516,6 @@
     </div>
   </section>
 
-  <!-- FACILITIES SECTION - SPLIT INTO 2 PARTS -->
   <section class="facilities" id="facilities">
     <div class="section-header">
       <div class="section-tag">Facilities Plan</div>
@@ -505,10 +523,9 @@
       <p class="section-subtitle">22 world-class facilities designed for your comfort and convenience</p>
     </div>
     
-    <!-- Part 1: Podium Level Facilities -->
     <div class="facilities-split">
       <div class="facilities-image">
-        <img src="facilities-plan-1.png" alt="D'Tessera Podium Facilities" onerror="this.src='https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Podium+Level+Facilities'">
+        <img src="facilities-plan-1.jpg" alt="D'Tessera Podium Facilities" onerror="this.src='https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Podium+Level+Facilities'">
       </div>
       <div class="facilities-content">
         <h3>Podium Level Facilities</h3>
@@ -551,10 +568,9 @@
       </div>
     </div>
 
-    <!-- Part 2: Sky Deck & Additional Facilities -->
     <div class="facilities-split reverse">
       <div class="facilities-image">
-        <img src="facilities-plan-2.png" alt="D'Tessera Sky Deck Facilities" onerror="this.src='https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Sky+Deck+Facilities'">
+        <img src="facilities-plan-2.jpg" alt="D'Tessera Sky Deck Facilities" onerror="this.src='https://via.placeholder.com/700x500/f0e9d8/1a3a2e?text=Sky+Deck+Facilities'">
       </div>
       <div class="facilities-content">
         <h3>Sky Deck & Additional Facilities</h3>
@@ -606,7 +622,6 @@
     </div>
   </section>
 
-  <!-- LAYOUT PLAN SECTION WITH 7 LAYOUTS -->
   <section class="layout-plan" id="layout">
     <div class="section-header">
       <div class="section-tag">Layout Plan</div>
@@ -624,7 +639,6 @@
       <button class="layout-tab-btn" onclick="showLayout('layoutD1D2')">Type D1 & D2</button>
     </div>
 
-    <!-- Layout A1 & A2 -->
     <div id="layoutA1A2" class="layout-content active">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -661,7 +675,6 @@
       </div>
     </div>
 
-    <!-- Layout A3 & A4 -->
     <div id="layoutA3A4" class="layout-content">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -698,7 +711,6 @@
       </div>
     </div>
 
-    <!-- Layout A5 & A6 -->
     <div id="layoutA5A6" class="layout-content">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -735,7 +747,6 @@
       </div>
     </div>
 
-    <!-- Layout B1 & B2 -->
     <div id="layoutB1B2" class="layout-content">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -773,7 +784,6 @@
       </div>
     </div>
 
-    <!-- Layout B3 & B4 -->
     <div id="layoutB3B4" class="layout-content">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -811,7 +821,6 @@
       </div>
     </div>
 
-    <!-- Layout C1 & C2 -->
     <div id="layoutC1C2" class="layout-content">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -848,7 +857,6 @@
       </div>
     </div>
 
-    <!-- Layout D1 & D2 -->
     <div id="layoutD1D2" class="layout-content">
       <div class="layout-showcase">
         <div class="layout-image">
@@ -888,7 +896,6 @@
     </div>
   </section>
 
-  <!-- FAQ SECTION WITH OFFICIAL CONTENT -->
   <section class="faq" id="faq">
     <div class="section-header">
       <div class="section-tag">FAQ</div>
@@ -1144,8 +1151,26 @@
   </div>
 
   <script>
-    // Google Apps Script URL
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx78EBcc0vv2hKBYopDwBmRrSuCAIuGEm6I-lKg1zCVPW-DY4sBiKk828VdH4irtyg/exec';
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu');
+    const nav = document.querySelector('nav');
+
+    mobileMenuBtn.addEventListener('click', function() {
+      nav.classList.toggle('active');
+      this.querySelector('i').classList.toggle('fa-bars');
+      this.querySelector('i').classList.toggle('fa-times');
+    });
+
+    // Close mobile menu when clicking on a nav link
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('active');
+        mobileMenuBtn.querySelector('i').classList.add('fa-bars');
+        mobileMenuBtn.querySelector('i').classList.remove('fa-times');
+      });
+    });
 
     window.addEventListener('scroll', function() {
       const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
@@ -1172,12 +1197,10 @@
       const faqItem = element.parentElement;
       const isActive = faqItem.classList.contains('active');
       
-      // Close all FAQ items
       document.querySelectorAll('.faq-item').forEach(item => {
         item.classList.remove('active');
       });
       
-      // Open clicked item if it wasn't active
       if (!isActive) {
         faqItem.classList.add('active');
       }
@@ -1212,12 +1235,10 @@
       const status = document.getElementById('formStatus');
       const form = e.target;
       
-      // Disable button and show loading
       btn.disabled = true;
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
       status.style.display = 'none';
       
-      // Get form data
       const formData = new FormData(form);
       const name = formData.get('name');
       const phone = formData.get('phone');
@@ -1225,7 +1246,6 @@
       
       console.log('📤 Sending to Google Script:', Object.fromEntries(formData));
       
-      // Send to Google Apps Script with no-cors mode
       fetch(SCRIPT_URL, { 
         method: 'POST', 
         body: formData,
@@ -1234,16 +1254,13 @@
       .then(() => {
         console.log('✅ Success!');
         
-        // Show success message
         status.style.display = 'block';
         status.style.background = 'rgba(37, 211, 102, 0.2)';
         status.style.color = '#25D366';
         status.innerHTML = '<i class="fas fa-check-circle"></i> <strong>Thank you!</strong> Your inquiry has been sent successfully. We will contact you soon.';
         
-        // Reset form
         form.reset();
         
-        // Prepare WhatsApp message
         const whatsappMessage = encodeURIComponent(
           `Hi, I am ${name}\n\n` +
           `I am interested on D'Tessera project and would like to know more details about the project.\n\n` +
@@ -1251,7 +1268,6 @@
           `🏠 Preferred Unit: ${unit}`
         );
         
-        // Open WhatsApp after 1.5 seconds
         setTimeout(() => {
           const whatsappURL = `https://wa.me/60177544163?text=${whatsappMessage}`;
           window.open(whatsappURL, '_blank');
@@ -1269,7 +1285,6 @@
         btn.disabled = false;
         btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Inquiry';
         
-        // Hide status after 8 seconds
         setTimeout(() => {
           status.style.display = 'none';
         }, 8000);
@@ -1290,11 +1305,6 @@
       if(e.key === 'Escape') closeLightbox();
     });
 
-    document.querySelector('.mobile-menu').addEventListener('click', function() {
-      alert('Mobile menu - Add mobile navigation functionality here');
-    });
-
-    // Debug: Log when page loads
     window.addEventListener('load', function() {
       console.log('🌐 D\'Tessera website loaded');
       console.log('📋 Script URL:', SCRIPT_URL);
