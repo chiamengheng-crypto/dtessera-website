@@ -65,9 +65,8 @@
     .btn-secondary{display:inline-flex;align-items:center;gap:10px;padding:18px 45px;background:transparent;color:var(--white);text-decoration:none;border-radius:50px;font-weight:600;font-size:1.05rem;transition:all 0.3s;border:2px solid var(--white)}
     .btn-secondary:hover{background:var(--white);color:var(--primary);transform:translateY(-3px)}
 
-    .btn-whatsapp{position:fixed;bottom:30px;right:30px;background:#25D366;color:var(--white);width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;text-decoration:none;box-shadow:0 6px 30px rgba(37,211,102,0.5);z-index:999;animation:pulse 2s infinite;transition:transform 0.3s}
+    .btn-whatsapp{position:fixed;bottom:30px;right:30px;background:#25D366;color:var(--white);width:70px;height:70px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2.2rem;text-decoration:none;box-shadow:0 6px 30px rgba(37,211,102,0.5);z-index:999;transition:transform 0.3s}
     .btn-whatsapp:hover{transform:scale(1.1)}
-    @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,0.7)}70%{box-shadow:0 0 0 20px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
 
     section{padding:100px 5%}
     .section-header{text-align:center;max-width:800px;margin:0 auto 60px}
@@ -110,29 +109,6 @@
     .gallery-item:hover .gallery-overlay{opacity:1}
     .gallery-overlay h4{color:var(--white);font-family:'Playfair Display',serif;font-size:1.3rem;margin-bottom:5px}
     .gallery-overlay p{color:rgba(255,255,255,0.85);font-size:0.9rem}
-
-    .floorplans{background:var(--light)}
-    .floorplan-tabs{display:flex;justify-content:center;gap:15px;margin-bottom:50px;flex-wrap:wrap}
-    .tab-btn{padding:14px 35px;background:var(--white);border:2px solid transparent;color:var(--text);border-radius:50px;cursor:pointer;font-weight:600;font-size:0.95rem;transition:all 0.3s;box-shadow:0 3px 15px rgba(0,0,0,0.08)}
-    .tab-btn.active,.tab-btn:hover{background:linear-gradient(135deg,var(--accent),var(--accent-light));color:var(--white);border-color:var(--accent);transform:translateY(-2px)}
-    .floorplan-content{display:none;max-width:1200px;margin:0 auto;animation:fadeIn 0.6s}
-    .floorplan-content.active{display:block}
-    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-    .floorplan-showcase{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;background:var(--white);padding:50px;border-radius:25px;box-shadow:var(--shadow)}
-    .floorplan-visual{background:var(--light);border-radius:18px;height:550px;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
-    .floorplan-visual img{width:100%;height:100%;object-fit:contain;padding:30px;transition:transform 0.5s}
-    .floorplan-visual:hover img{transform:scale(1.05)}
-    .floorplan-info h3{font-family:'Playfair Display',serif;font-size:2rem;color:var(--primary);margin-bottom:10px}
-    .floorplan-info .price{font-size:1.8rem;color:var(--accent);font-weight:700;margin-bottom:25px;display:block}
-    .floorplan-info .specs{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin:30px 0}
-    .spec-item{background:var(--light);padding:18px;border-radius:12px;text-align:center}
-    .spec-item i{color:var(--accent);font-size:1.4rem;margin-bottom:8px;display:block}
-    .spec-item span{font-weight:600;color:var(--primary);display:block;font-size:0.95rem}
-    .floorplan-features{margin:25px 0}
-    .floorplan-features h4{margin-bottom:15px;color:var(--primary)}
-    .floorplan-features ul{list-style:none}
-    .floorplan-features li{padding:10px 0;padding-left:32px;position:relative;color:var(--text-light)}
-    .floorplan-features li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;color:var(--secondary)}
 
     .usp{background:linear-gradient(135deg,var(--primary) 0%,var(--secondary) 100%);color:var(--white);position:relative;overflow:hidden}
     .usp::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:radial-gradient(circle,rgba(201,169,97,0.1) 0%,transparent 60%);animation:rotate 40s linear infinite}
@@ -178,6 +154,7 @@
     .layout-tab-btn.active,.layout-tab-btn:hover{background:var(--primary);color:var(--white);transform:translateY(-2px)}
     .layout-content{display:none;max-width:1200px;margin:0 auto;animation:fadeIn 0.6s}
     .layout-content.active{display:block}
+    @keyframes fadeIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
     .layout-showcase{display:grid;grid-template-columns:1fr 1.2fr;gap:50px;background:var(--white);padding:50px;border-radius:25px;box-shadow:var(--shadow);align-items:center}
     .layout-image{background:var(--light);border-radius:18px;height:600px;display:flex;align-items:center;justify-content:center;overflow:hidden}
     .layout-image img{width:100%;height:100%;object-fit:contain;padding:20px}
@@ -247,7 +224,7 @@
 
     @media(max-width:1024px){
       .hero-content h1{font-size:3.2rem}
-      .about-grid,.floorplan-showcase,.facilities-split,.layout-showcase{grid-template-columns:1fr}
+      .about-grid,.facilities-split,.layout-showcase{grid-template-columns:1fr}
       .facilities-split.reverse{direction:ltr}
       nav{display:none}
       .mobile-menu{display:block}
@@ -260,7 +237,7 @@
       .hero-stats{gap:30px}
       .stat-number{font-size:2.2rem}
       .section-title{font-size:2.1rem}
-      .about-features,.floorplan-info .specs{grid-template-columns:1fr}
+      .about-features{grid-template-columns:1fr}
       .btn-primary,.btn-secondary{width:100%;justify-content:center}
     }
   </style>
@@ -279,7 +256,6 @@
       <a href="#about">About</a>
       <a href="#virtual">Virtual Tour</a>
       <a href="#gallery">Gallery</a>
-      <a href="#floorplans">Floor Plans</a>
       <a href="#facilities">Facilities</a>
       <a href="#layout">Layout</a>
       <a href="#faq">FAQ</a>
@@ -406,149 +382,6 @@
       <div class="gallery-item" onclick="openLightbox(this)">
         <img src="https://image.qwenlm.ai/public_source/03702030-9a5e-490a-88bb-4611c710de6d/1900d4e6e-5b11-45b7-8dba-4b499447154f1719.png" alt="Games Room">
         <div class="gallery-overlay"><h4>Games Room</h4><p>Entertainment for all ages</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="floorplans" id="floorplans">
-    <div class="section-header">
-      <div class="section-tag">Unit Selection</div>
-      <h2 class="section-title">Choose Your Perfect Space</h2>
-      <p class="section-subtitle">Spacious layouts from 1,100 to 1,331 sq.ft with flexible hackable walls to suit your lifestyle</p>
-    </div>
-
-    <div class="floorplan-tabs">
-      <button class="tab-btn active" onclick="showFloorplan('typeA')">Type A (1,100 sq.ft)</button>
-      <button class="tab-btn" onclick="showFloorplan('typeB')">Type B (1,300 sq.ft)</button>
-      <button class="tab-btn" onclick="showFloorplan('typeC')">Type C (1,129 sq.ft)</button>
-      <button class="tab-btn" onclick="showFloorplan('typeD')">Type D (1,331 sq.ft)</button>
-    </div>
-
-    <div id="typeA" class="floorplan-content active">
-      <div class="floorplan-showcase">
-        <div class="floorplan-visual">
-          <img src="floorplan-type-a.jpg" alt="Type A Floor Plan" id="floorplan-typeA" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+A+Floor+Plan+-+1100+sqft'">
-        </div>
-        <div class="floorplan-info">
-          <h3>Type A1 - A6</h3>
-          <span class="price">From RM879,000</span>
-          <div class="specs">
-            <div class="spec-item"><i class="fas fa-bed"></i><span>3+1 Bedrooms</span></div>
-            <div class="spec-item"><i class="fas fa-bath"></i><span>2 Bathrooms</span></div>
-            <div class="spec-item"><i class="fas fa-ruler-combined"></i><span>1,100 sq.ft</span></div>
-            <div class="spec-item"><i class="fas fa-car"></i><span>2 Parking</span></div>
-          </div>
-          <div class="floorplan-features">
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Foyer with optional ramp (elderly-friendly units)</li>
-              <li>Spacious living and dining area with balcony</li>
-              <li>Modern kitchen with yard and utility area</li>
-              <li>Study nook - perfect for work-from-home</li>
-              <li>Master bedroom with ensuite bathroom</li>
-              <li>2 additional bedrooms + 1 common bathroom</li>
-              <li>Hackable walls for customization</li>
-              <li>Park or waterfall views (selected units)</li>
-            </ul>
-          </div>
-          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Floor Plan</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="typeB" class="floorplan-content">
-      <div class="floorplan-showcase">
-        <div class="floorplan-visual">
-          <img src="floorplan-type-b.jpg" alt="Type B Floor Plan" id="floorplan-typeB" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+B+Floor+Plan+-+1300+sqft'">
-        </div>
-        <div class="floorplan-info">
-          <h3>Type B1 - B4</h3>
-          <span class="price">From RM985,000</span>
-          <div class="specs">
-            <div class="spec-item"><i class="fas fa-bed"></i><span>4+1 Bedrooms</span></div>
-            <div class="spec-item"><i class="fas fa-bath"></i><span>2 Bathrooms</span></div>
-            <div class="spec-item"><i class="fas fa-ruler-combined"></i><span>1,300 sq.ft</span></div>
-            <div class="spec-item"><i class="fas fa-car"></i><span>2-3 Parking</span></div>
-          </div>
-          <div class="floorplan-features">
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Extra spacious family layout</li>
-              <li>4 bedrooms + study room</li>
-              <li>Utility room for extra storage</li>
-              <li>Large living and dining area</li>
-              <li>Balcony with park/waterfall views</li>
-              <li>Ideal for multi-generational living</li>
-              <li>Hackable walls for customization</li>
-              <li>Enhanced privacy</li>
-            </ul>
-          </div>
-          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Floor Plan</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="typeC" class="floorplan-content">
-      <div class="floorplan-showcase">
-        <div class="floorplan-visual">
-          <img src="floorplan-type-c.jpg" alt="Type C Floor Plan" id="floorplan-typeC" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+C+Floor+Plan+-+1129+sqft'">
-        </div>
-        <div class="floorplan-info">
-          <h3>Type C1 - C2 (Elderly-Friendly)</h3>
-          <span class="price">From RM895,000</span>
-          <div class="specs">
-            <div class="spec-item"><i class="fas fa-bed"></i><span>3+1 Bedrooms</span></div>
-            <div class="spec-item"><i class="fas fa-bath"></i><span>2 Bathrooms</span></div>
-            <div class="spec-item"><i class="fas fa-ruler-combined"></i><span>1,129 sq.ft</span></div>
-            <div class="spec-item"><i class="fas fa-car"></i><span>2 Parking</span></div>
-          </div>
-          <div class="floorplan-features">
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Barrier-free design throughout</li>
-              <li>Built-in wheelchair ramp at foyer</li>
-              <li>Wheelchair-accessible bathroom</li>
-              <li>Wider doorways for easy access</li>
-              <li>Close to lift lobby</li>
-              <li>Perfect for aging in place</li>
-              <li>3+1 bedrooms with 2 bathrooms</li>
-              <li>Study nook</li>
-            </ul>
-          </div>
-          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Floor Plan</a>
-        </div>
-      </div>
-    </div>
-
-    <div id="typeD" class="floorplan-content">
-      <div class="floorplan-showcase">
-        <div class="floorplan-visual">
-          <img src="floorplan-type-d.jpg" alt="Type D Floor Plan" id="floorplan-typeD" onerror="this.src='https://via.placeholder.com/700x550/f0e9d8/1a3a2e?text=Type+D+Floor+Plan+-+1331+sqft'">
-        </div>
-        <div class="floorplan-info">
-          <h3>Type D1 - D2 (Elderly-Friendly Corner Unit)</h3>
-          <span class="price">From RM1,042,000</span>
-          <div class="specs">
-            <div class="spec-item"><i class="fas fa-bed"></i><span>4+1 Bedrooms</span></div>
-            <div class="spec-item"><i class="fas fa-bath"></i><span>2 Bathrooms</span></div>
-            <div class="spec-item"><i class="fas fa-ruler-combined"></i><span>1,331 sq.ft</span></div>
-            <div class="spec-item"><i class="fas fa-car"></i><span>3 Parking</span></div>
-          </div>
-          <div class="floorplan-features">
-            <h4>Key Features:</h4>
-            <ul>
-              <li>Largest unit with premium features</li>
-              <li>Corner unit with dual-aspect views</li>
-              <li>Full elderly-friendly specifications</li>
-              <li>4+1 bedrooms + study</li>
-              <li>Utility room</li>
-              <li>Enhanced privacy</li>
-              <li>Premium finishes included</li>
-              <li>The ultimate family sanctuary</li>
-            </ul>
-          </div>
-          <a href="#contact" class="btn-primary" style="margin-top:20px;display:inline-block"><i class="fas fa-download"></i> Download Floor Plan</a>
-        </div>
       </div>
     </div>
   </section>
@@ -1067,120 +900,130 @@
     <div class="faq-container">
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>What is the tenure of D'Tessera Residences?</span>
+          <span>What are the nearby attractions or amenities around Exsim D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            D'Tessera Residences is a <strong>Leasehold</strong> development.
+            D'Tessera Residences is surrounded by comprehensive amenities including:<br>
+            • <strong>Shopping:</strong> 1 Utama, IKEA Damansara, The Curve, eCurve, IPC Shopping Centre<br>
+            • <strong>Healthcare:</strong> KPJ Damansara Specialist Hospital, Columbia Asia Hospital<br>
+            • <strong>Education:</strong> International schools, Tunku Kurshiah College, SMJK Chung Hwa<br>
+            • <strong>Transport:</strong> 9 minutes to MRT Mutiara Damansara<br>
+            • <strong>Recreation:</strong> 10-acre Central Park, Bukit Lanjan Forest Reserve
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>When is the expected completion date?</span>
+          <span>How Many Lifts in a Level?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            The expected completion date is <strong>Q3 2026</strong>. For the latest updates, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
+            D'Tessera Residences features <strong>7 high-speed lifts</strong> serving only <strong>14 units per floor</strong>, ensuring minimal waiting time and maximum privacy for residents.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Are there any Bumiputera lots available?</span>
+          <span>What is the expected completion date for Exsim D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            Yes, <strong>Bumiputera lots are available</strong>. Please contact us for more information on availability and pricing.
+            The expected completion date is <strong>Q3 2026</strong>. For the latest construction updates, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>What is the maintenance fee?</span>
+          <span>What Is Current Construction Stage of D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            The maintenance fee is <strong>RM0.35 per sq.ft</strong> (including sinking fund), which is very competitive for the comprehensive facilities offered.
+            For the latest construction progress and updates, please contact us directly at <a href="https://wa.me/60177544163">+6017-754 4163</a> or WhatsApp us to schedule a site visit.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Is the unit furnished?</span>
+          <span>What is the monthly maintenance fee?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            The units come with <strong>partial furnishing</strong>. For detailed specifications, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
+            The maintenance fee is <strong>RM0.35 per sq.ft</strong> (including sinking fund), which is very competitive considering the comprehensive facilities and services provided.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Can I customize the unit layout?</span>
+          <span>What is the starting price for units at D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            Yes! All units feature <strong>hackable walls</strong>, allowing you to customize the layout to suit your family's needs.
+            Units at D'Tessera Residences start from <strong>RM837,900</strong> for Type A units (1,100 sq.ft). For detailed pricing and available units, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>Are there elderly-friendly units?</span>
+          <span>How many retails below D'Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            Yes, <strong>Type C and Type D</strong> units are designed with elderly-friendly features including built-in ramps at the foyer and wheelchair-accessible bathrooms.
+            There are <strong>27 retail units</strong> at the ground level of D'Tessera Residences, managed by Exsim, providing convenient shopping and dining options right at your doorstep.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>How far is it from the MRT station?</span>
+          <span>What are the Furnishing Package for D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            D'Tessera Residences is approximately <strong>9 minutes drive to MRT Mutiara Damansara</strong>, providing excellent connectivity to the city.
+            The units come with <strong>partial furnishing</strong>. For detailed specifications and furnishing package details, please contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a>.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>What shopping malls are nearby?</span>
+          <span>What security features are included in D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            You'll be just <strong>5 minutes away</strong> from major shopping destinations including 1 Utama, IKEA Damansara, The Curve, eCurve, and IPC Shopping Centre.
+            D'Tessera Residences features a comprehensive <strong>three-tier security system</strong> including 24/7 security personnel, CCTV surveillance, and controlled access points to ensure the safety and privacy of all residents.
           </div>
         </div>
       </div>
 
       <div class="faq-item">
         <div class="faq-question" onclick="toggleFaq(this)">
-          <span>How do I book a unit or schedule a viewing?</span>
+          <span>Is there any Sales Gallery for D Tessera Residences?</span>
           <i class="fas fa-chevron-down"></i>
         </div>
         <div class="faq-answer">
           <div class="faq-answer-content">
-            Simply <strong>WhatsApp us at <a href="https://wa.me/60177544163">+6017-754 4163</a></strong> or fill in the contact form below. We'll arrange a private viewing at your convenience and bring you to the showroom.
+            Yes! Our sales gallery is located at:<br>
+            <strong>G89K & 89L, Ground Level<br>
+            Empire Damansara<br>
+            Jalan PJU 8/8, Damansara Perdana<br>
+            47820 Petaling Jaya, Selangor</strong><br><br>
+            Contact us at <a href="https://wa.me/60177544163">+6017-754 4163</a> to schedule a private viewing.
           </div>
         </div>
       </div>
@@ -1319,13 +1162,6 @@
       }
     });
 
-    function showFloorplan(type) {
-      document.querySelectorAll('.floorplan-content').forEach(c => c.classList.remove('active'));
-      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-      document.getElementById(type).classList.add('active');
-      event.target.classList.add('active');
-    }
-
     function showLayout(layout) {
       document.querySelectorAll('.layout-content').forEach(c => c.classList.remove('active'));
       document.querySelectorAll('.layout-tab-btn').forEach(b => b.classList.remove('active'));
@@ -1390,7 +1226,7 @@
       
       console.log('📤 Sending to Google Script:', Object.fromEntries(formData));
       
-      // Send to Google Apps Script
+      // Send to Google Apps Script with no-cors mode
       fetch(SCRIPT_URL, { 
         method: 'POST', 
         body: formData,
