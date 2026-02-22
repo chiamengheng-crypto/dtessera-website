@@ -546,39 +546,39 @@
   <section class="amenities" id="amenities">
     <div class="section-header">
       <div class="section-tag">World-Class Facilities</div>
-      <h2 class="section-title">Premium Amenities</h2>
+      <h2 class="section-title">22 Premium Amenities</h2>
       <p class="section-subtitle">From podium level to sky deck, enjoy resort-style living with comprehensive facilities</p>
     </div>
     
     <div class="amenities-grid">
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-swimming-pool"></i></div>
-        <h4>Infinity Swimming Pool</h4>
+        <h4>Serene Pool</h4>
         <p>Resort-style pool with stunning park views</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-spa"></i></div>
-        <h4>Sky Deck (Level 49)</h4>
-        <p>Panoramic views from the top floor</p>
+        <h4>Jacuzzi</h4>
+        <p>Relax and unwind in luxury</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-dumbbell"></i></div>
-        <h4>Gym & Fitness Centre</h4>
-        <p>State-of-the-art equipment</p>
+        <h4>Fitastic Garden</h4>
+        <p>State-of-the-art fitness center</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-child"></i></div>
-        <h4>Kids Playground</h4>
+        <h4>Kid's Playground</h4>
         <p>Safe and fun play areas</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-fire"></i></div>
-        <h4>BBQ Area</h4>
-        <p>Outdoor dining and entertainment</p>
+        <h4>Sizzle N' Grill</h4>
+        <p>BBQ area for outdoor dining</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-film"></i></div>
-        <h4>Mini Theater</h4>
+        <h4>Mini Theater & Bar</h4>
         <p>Private screening room</p>
       </div>
       <div class="amenity-card">
@@ -588,28 +588,28 @@
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-leaf"></i></div>
-        <h4>Hammock Garden</h4>
+        <h4>Maze Hammock Garden</h4>
         <p>Relaxation in nature</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-gamepad"></i></div>
-        <h4>Games Room</h4>
+        <h4>Gamer's Hideout</h4>
         <p>Entertainment for all ages</p>
       </div>
       <div class="amenity-card">
         <div class="amenity-icon"><i class="fas fa-users"></i></div>
-        <h4>Function Room</h4>
+        <h4>Multipurpose Hall</h4>
         <p>Private event space</p>
       </div>
       <div class="amenity-card">
-        <div class="amenity-icon"><i class="fas fa-shield-alt"></i></div>
-        <h4>24/7 Security</h4>
-        <p>Three-tier security system</p>
+        <div class="amenity-icon"><i class="fas fa-basketball-ball"></i></div>
+        <h4>Half Basketball Court</h4>
+        <p>Sports and recreation</p>
       </div>
       <div class="amenity-card">
-        <div class="amenity-icon"><i class="fas fa-shopping-bag"></i></div>
-        <h4>Retail Plaza</h4>
-        <p>27 retail units at ground level</p>
+        <div class="amenity-icon"><i class="fas fa-cloud-sun"></i></div>
+        <h4>Sky Deck (Level 49)</h4>
+        <p>Panoramic views from the top</p>
       </div>
     </div>
   </section>
@@ -729,7 +729,7 @@
   </div>
 
   <script>
-    // Google Apps Script URL - YOUR URL
+    // Google Apps Script URL
     const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbx78EBcc0vv2hKBYopDwBmRrSuCAIuGEm6I-lKg1zCVPW-DY4sBiKk828VdH4irtyg/exec';
 
     window.addEventListener('scroll', function() {
@@ -794,6 +794,7 @@
       const unit = formData.get('unit');
       
       console.log('📤 Sending to Google Script:', Object.fromEntries(formData));
+      console.log('📋 Script URL:', SCRIPT_URL);
       
       // Send to Google Apps Script with better error handling
       fetch(SCRIPT_URL, { 
@@ -801,8 +802,10 @@
         body: formData,
         mode: 'no-cors' // Required for Google Apps Script
       })
-      .then(() => {
-        console.log('✅ Success response received');
+      .then(response => {
+        console.log('✅ Response received:', response);
+        console.log('Response status:', response.status);
+        console.log('Response type:', response.type);
         
         // Show success message
         status.style.display = 'block';
@@ -868,6 +871,7 @@
     window.addEventListener('load', function() {
       console.log('🌐 D\'Tessera website loaded');
       console.log('📋 Script URL:', SCRIPT_URL);
+      console.log('✅ Form is ready to submit');
     });
   </script>
 </body>
